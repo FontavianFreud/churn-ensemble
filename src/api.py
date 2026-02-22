@@ -1,4 +1,5 @@
 from __future__ import annotations
+from src.train import main as train_model
 
 from pathlib import Path
 from typing import List
@@ -32,8 +33,8 @@ def health() -> dict:
 @app.post("/predict", response_model=PredictResponse)
 def predict(req: PredictRequest) -> PredictResponse:
     if not MODEL_PATH.exists():
-        raise RuntimeError("Model not found. Run `python src/train.py` first.")
-
+        train_model()
+        
     model = joblib.load(MODEL_PATH)
     x = np.array(req.features, dtype=float).reshape(1, -1)
 
