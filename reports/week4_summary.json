@@ -1,0 +1,12 @@
+{
+  "cost_fp": 1.0,
+  "cost_fn": 5.0,
+  "chosen_threshold_val_min_cost": 0.11,
+  "ranking_compare_test_csv": "reports/week4_ranking_compare_test.csv",
+  "threshold_sweep_val_csv": "reports/week4_threshold_sweep_val.csv",
+  "hard_vs_soft_test_json": "reports/week4_hard_vs_soft_test.json",
+  "reliability_plots": [
+    "reports/week4_reliability_logreg_platt.png",
+    "reports/week4_reliability_soft_platt.png"
+  ]
+}
