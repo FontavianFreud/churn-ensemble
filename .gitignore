@@ -5,3 +5,5 @@ artifacts/
 data/
 .venv/
 .DS_Store
+logs/
+artifacts/
